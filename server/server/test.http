@@ -1,0 +1,59 @@
+@url=http://localhost:3000/api
+@json=Content-Type: application/json
+
+
+### 注册
+post {{url}}/createUser
+{{json}}
+
+{
+     "username": "admin",
+     "email": "s32909@yeah.net",
+     "password": "123456"
+}
+
+### 登录
+post {{url}}/login
+{{json}}
+
+{
+     "email": "s32909@yeah.net",
+     "password": "123456"
+}
+
+### 搜索
+post {{url}}/search
+{{json}}
+
+{
+     "search": "s3"
+}
+
+
+### 修改个人信息
+post {{url}}/userInfo/update
+{{json}}
+
+{
+     "avatar": "",
+     "birth": "",
+     "createTime": "2020-12-31 09:47",
+     "email": "s3@qq.com",
+     "explain": "",
+     "phone": null,
+     "sex": 0,
+     "username": "s3",
+     "password": "$2b$10$r7Z3SWF4rVNaQUHchevXRe",
+     "__v": 0,
+     "_id": "5fed2df1389c6f19008e7665"
+}
+
+### 修改好友昵称
+post {{url}}/friend/markName
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZWQyZGYxMzg5YzZmMTkwMDhlNzY2NSIsImlhdCI6MTYwOTM5MzMwMiwiZXhwIjoxNjA5Mzk2OTAyfQ.7u1Q6JQWM2MKkWNuFASgarwnu8A9pueerAz3-pL94OM
+{{json}}
+
+{
+     "uid": "5fed2df1389c6f19008e7665",
+     "fid": "5fed646f9d7d7f273c3af151"
+}
